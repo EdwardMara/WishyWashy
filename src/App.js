@@ -1,28 +1,61 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Navbar from './components/Navbar/index'
+import Navbar from './components/Navbar/index';
 
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import jwt_decode from "jwt-decode";
+import setAuthToken from "./utils/setAuthToken";
+import { setCurrentUser, logout } from "./actions/authActions";
 
+import { Provider } from "react-redux";
+import store from "./store";
 
-class App extends Component{
+import WorkerRoute from "./utils/WorkerRoute";
+import ManagerRoute from "./utils/ManagerRoute";
 
-  state ={
+import Footer from "./components/Footer";
+import Landing from "./components/Landing";
+import RegisterWorker from "./components/RegisterWorker";
+import RegisterManager from "./components/RegisterManager";
+import LoginWorker from "./components/LoginWorker";
+import LoginManager from "./components/LoginManager";
+import HelloWorker from "./components/HelloWorker";
+import HelloManager from "./components/HelloManager";
+import LoginNavbar from "./components/LoginNavbar"
+
+class App extends Component {
+
+  state = {
     role: "employer"
   }
   // control the role and render diferent page base on the role
   // call to the backend  return from the db all the jobs
   // update state jobs with the data comming from the db then you will render result
 
-  render () {
-    return(
-    <div>
-    <Navbar
-     role= {this.state.role}
-    >
-     </Navbar>
-    </div>
-    )};
+  render() {
+    return (
+      <div>
+        <Provider store={store}>
+          <Router>
+            <div className="App">
+              <LoginNavbar />
+              <Route exact path="/" component={Landing} />
+              <div className="container">
+                <Route exact path="/registerWorker" component={RegisterWorker} />
+                <Route exact path="/registerManager" component={RegisterManager} />
+                <Route exact path="/loginWorker" component={LoginWorker} />
+                <Route exact path="/loginManager" component={LoginManager} />
+                <Route exact path="/helloWorker" component={HelloWorker} />
+                <Route exact path="/helloManager" component={HelloManager} />
+              </div>
+              <Footer />
+            </div>
+          </Router>
+        </Provider>
+      </div>
+    )
+  };
 
 
 }
