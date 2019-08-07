@@ -25,7 +25,7 @@ import HelloWorker from "./components/HelloWorker";
 import HelloManager from "./components/HelloManager";
 import LoginNavbar from "./components/LoginNavbar"
 import WorkerDash from "./components/WorkerDash"
-import NewJobForm from "./component/NewJobForm"
+import NewJobForm from "./components/NewJobForm"
 
 
 class App extends Component {
