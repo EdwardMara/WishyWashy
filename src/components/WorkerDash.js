@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { List, ListItem } from "./List";
-// import API from "../utils/API";
 import jobs from "./jobs.json";
 
 
