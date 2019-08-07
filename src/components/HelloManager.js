@@ -7,9 +7,16 @@ import API from '../utils/API';
 
 class HelloManager extends Component {
   state = {
+    manager: {}
   }
 
   componentDidMount() {
+    const { auth } = this.props;
+    API.getManager(auth.user.id)
+    .then((manager) => {
+      this.setState({manager: manager.data})
+    })
+    .catch()
   }
 
   componentWillReceiveProps(nextProps) {
@@ -22,26 +29,8 @@ class HelloManager extends Component {
     this.setState({[event.target.name]: event.target.value})
   }
 
-  handleFormSubmit = event => {
-    event.preventDefault();
-    const job = {
-      companyName: this.state.companyName,
-      position: this.state.position,
-      address: this.state.address,
-      pay: this.state.pay,
-      hours: this.state.hours,
-      ManagerId: this.state.auth.user.id
-    }
-    console.log(job)
-    // API.postJob()
-    // .then(res => {
-    //   console.log(res)
-    // })
-    // .catch(err => this.setState({ error: err.message}))
-  }
-
   render() {
-    const { auth } = this.props;
+    let state = this.state;
     return (
       <div>
         <h2>Manager Dashboard</h2>

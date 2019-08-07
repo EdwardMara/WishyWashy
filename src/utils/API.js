@@ -8,5 +8,8 @@ export default {
   },
   postJob: function(object) {
     return axios.post("https://wishywashy-api.herokuapp.com/api/createJob", object);
+  },
+  getManager: function(id) {
+    return axios.get(`https://wishywashy-api.herokuapp.com/api/profile/manager/${id}`)
   }
 };

@@ -24,24 +24,24 @@ class NewJobForm extends Component {
     handleFormSubmit = event => {
       event.preventDefault();
       console.log(this.state)
+      const { auth } = this.props;
       const job = {
         companyName: this.state.companyName,
         position: this.state.position,
         address: this.state.address,
         pay: this.state.pay,
         hours: this.state.hours,
-        ManagerId: this.state.auth.user.id
+        ManagerId: auth.user.id
       }
-      console.log(job)
-      // API.postJob()
-      // .then(res => {
-      //   console.log(res)
-      // })
-      // .catch(err => this.setState({ error: err.message}))
+      API.postJob(job)
+      .then(res => {
+        console.log(res)
+      })
+      .catch(err => this.setState({ error: err.message}))
     }
 
     render() {
-        const { auth } = this.props;
+        
     return (
         <div>
             <form>
