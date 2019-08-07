@@ -122,10 +122,13 @@
 }
 
 @media screen and (min-width: 30em) {
+
+  
    
     .flex-row-ns {
         flex-direction: row;
     }
+
     .w-40-ns {
         width: 40%;
     }
@@ -151,5 +154,14 @@
     }
     .f5-l {
         font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 426px){
+    .pic{
+        display: none;
+    }
+    .info{
+        text-align: center;
     }
 }
