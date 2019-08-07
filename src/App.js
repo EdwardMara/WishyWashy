@@ -22,7 +22,8 @@ import LoginWorker from "./components/LoginWorker";
 import LoginManager from "./components/LoginManager";
 import HelloWorker from "./components/HelloWorker";
 import HelloManager from "./components/HelloManager";
-import LoginNavbar from "./components/LoginNavbar"
+import LoginNavbar from "./components/LoginNavbar";
+import NewJobForm from "./components/NewJobForm";
 
 class App extends Component {
 
@@ -32,6 +33,7 @@ class App extends Component {
   // control the role and render diferent page base on the role
   // call to the backend  return from the db all the jobs
   // update state jobs with the data comming from the db then you will render result
+
 
   render() {
     return (
@@ -48,6 +50,7 @@ class App extends Component {
                 <Route exact path="/loginManager" component={LoginManager} />
                 <Route exact path="/helloWorker" component={HelloWorker} />
                 <Route exact path="/helloManager" component={HelloManager} />
+                <Route exact path="/helloManager/newJob" component={NewJobForm} />
               </div>
               <Footer />
             </div>
