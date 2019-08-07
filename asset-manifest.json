@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/wishywashy/static/css/main.0146b6f9.chunk.css",
+    "main.js": "/wishywashy/static/js/main.7976d7ee.chunk.js",
+    "main.js.map": "/wishywashy/static/js/main.7976d7ee.chunk.js.map",
+    "runtime~main.js": "/wishywashy/static/js/runtime~main.d917a420.js",
+    "runtime~main.js.map": "/wishywashy/static/js/runtime~main.d917a420.js.map",
+    "static/js/2.8136d07b.chunk.js": "/wishywashy/static/js/2.8136d07b.chunk.js",
+    "static/js/2.8136d07b.chunk.js.map": "/wishywashy/static/js/2.8136d07b.chunk.js.map",
+    "index.html": "/wishywashy/index.html",
+    "precache-manifest.6fa370f9bb32e450a6e0ad1872fd5b80.js": "/wishywashy/precache-manifest.6fa370f9bb32e450a6e0ad1872fd5b80.js",
+    "service-worker.js": "/wishywashy/service-worker.js",
+    "static/css/main.0146b6f9.chunk.css.map": "/wishywashy/static/css/main.0146b6f9.chunk.css.map",
+    "static/media/logo.svg": "/wishywashy/static/media/logo.5d5d9eef.svg"
+  }
+}
