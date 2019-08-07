@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -22,10 +23,13 @@ import LoginWorker from "./components/LoginWorker";
 import LoginManager from "./components/LoginManager";
 import HelloWorker from "./components/HelloWorker";
 import HelloManager from "./components/HelloManager";
-import LoginNavbar from "./components/LoginNavbar";
-import NewJobForm from "./components/NewJobForm";
+import LoginNavbar from "./components/LoginNavbar"
+import WorkerDash from "./components/WorkerDash"
+import NewJobForm from "./component/NewJobForm"
+
 
 class App extends Component {
+
 
   state = {
     role: "employer"
@@ -48,7 +52,7 @@ class App extends Component {
                 <Route exact path="/registerManager" component={RegisterManager} />
                 <Route exact path="/loginWorker" component={LoginWorker} />
                 <Route exact path="/loginManager" component={LoginManager} />
-                <Route exact path="/helloWorker" component={HelloWorker} />
+                <Route exact path="/helloWorker" component={WorkerDash} />
                 <Route exact path="/helloManager" component={HelloManager} />
                 <Route exact path="/helloManager/newJob" component={NewJobForm} />
               </div>
