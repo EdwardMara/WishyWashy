@@ -46,7 +46,7 @@ export const loginWorker = (data, history) => dispatch => {
       // Set current user
       dispatch(setCurrentUser(decoded));
 
-      history.push('https://wishywashy-api.herokuapp.com/helloWorker');
+      history.push('/helloWorker');
     })
     .catch(err =>
       dispatch({
@@ -79,7 +79,7 @@ export const loginWorker = (data, history) => dispatch => {
         
         dispatch({
           type: GET_ERRORS,
-          payload: err.response.data
+          payload: err.response
         })
       });
   };
