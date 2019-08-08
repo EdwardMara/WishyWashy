@@ -47,8 +47,7 @@ export const loginWorker = (data, history) => dispatch => {
       dispatch(setCurrentUser(decoded));
 
       history.push('/helloWorker');
-    })
-    .catch(err =>
+    }).catch(err =>
       dispatch({
         type: GET_ERRORS,
         payload: err.response

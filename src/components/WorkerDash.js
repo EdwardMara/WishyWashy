@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { List, ListItem } from "./List";
+import { connect } from 'react-redux';
 // import API from "../utils/API";
 import jobs from "./jobs.json";
 import API from "../utils/API";
@@ -9,11 +10,24 @@ import API from "../utils/API";
 class WorkerDash extends Component {
     state = {
         jobs,
-        jobList: []
+        jobList: [],
+        worker: {}
     };
     componentDidMount() {
         this.loadJobs();
+        const { auth } = this.props;
+        API.getWorker(auth.user.id)
+        .then((worker) => {
+          this.setState({ worker: worker.data })
+        })
+        .catch()
     };
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.auth) {
+          this.setState({ auth: nextProps.auth });
+        }
+      }
 
     loadJobs = () => {
         API.getJoblist()
@@ -23,29 +37,34 @@ class WorkerDash extends Component {
             .catch(err => console.log(err));
     };
 
-    handleOnClick = () => {
-
+    handleOnClick = (job)=>{
+        API.takeJob(job, this.state.worker.id)
+        .then(
+            console.log('connection made')
+        )
+        .catch()
     }
 
 
     render() {
         return (
-                <List>
-                    {this.state.jobList.map(job => {
-                        return (
-                            <ListItem
-                                key={job.id}
-                                position={job.position}
-                                img={this.state.jobs[0].img}
-                                address={job.address}
-                                pay={job.pay}
-                                hours={job.hours}
-                                handleClick={this.handleOnClick}
-                            />
-                        )
-                    })}
-                </List>
-          
+            <List>
+                {this.state.jobList.map(job => {
+                    return (
+                        <ListItem
+                            key={job.id}
+                            identifier={job.id}
+                            position={job.position}
+                            img={this.state.jobs[0].img}
+                            address={job.address}
+                            pay={job.pay}
+                            hours={job.hours}
+                            handleClick={this.handleOnClick}
+                        />
+                    )
+                })}
+            </List>
+
 
         )
     }
@@ -53,5 +72,8 @@ class WorkerDash extends Component {
 
 }
 
+const mapStateToProps = state => ({
+    auth: state.auth
+  });
 
-export default WorkerDash;
+export default connect(mapStateToProps)(WorkerDash);

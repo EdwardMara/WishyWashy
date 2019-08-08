@@ -11,5 +11,11 @@ export default {
   },
   getManager: function(id) {
     return axios.get(`https://wishywashy-api.herokuapp.com/api/profile/manager/${id}`)
+  },
+  takeJob: function(jobid, workerid) {
+    return axios.get(`https://wishywashy-api.herokuapp.com/api/takejob/${jobid}/${workerid}`)
+  },
+  getWorker: function(id) {
+    return axios.get(`https://wishywashy-api.herokuapp.com/api/profile/worker/${id}`)
   }
 };

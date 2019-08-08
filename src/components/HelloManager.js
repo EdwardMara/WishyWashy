@@ -16,7 +16,6 @@ class HelloManager extends Component {
     API.getManager(auth.user.id)
       .then((manager) => {
         this.setState({ manager: manager.data })
-        console.log(this.state.manager.Jobs)
       })
       .catch()
   }
@@ -33,6 +32,8 @@ class HelloManager extends Component {
 
   handleOnClick = event => {
     //TODO: associate work and job
+    console.log(event)
+
   }
 
   render() {
@@ -44,7 +45,6 @@ class HelloManager extends Component {
         </Link>
         <List>
           {this.state.manager.Jobs.map(job => {
-            console.log(job)
             return (
               <ListItem
                 key={job.id}
