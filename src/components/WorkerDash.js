@@ -23,6 +23,10 @@ class WorkerDash extends Component {
             .catch(err => console.log(err));
     };
 
+    handleOnClick = () => {
+
+    }
+
 
     render() {
         return (
@@ -36,6 +40,7 @@ class WorkerDash extends Component {
                                 address={job.address}
                                 pay={job.pay}
                                 hours={job.hours}
+                                handleClick={this.handleOnClick}
                             />
                         )
                     })}

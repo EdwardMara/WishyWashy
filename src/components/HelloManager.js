@@ -21,9 +21,6 @@ class HelloManager extends Component {
       .catch()
   }
 
-
-
-
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth) {
       this.setState({ auth: nextProps.auth });
@@ -34,6 +31,10 @@ class HelloManager extends Component {
     this.setState({ [event.target.name]: event.target.value })
   }
 
+  handleOnClick = event => {
+    //TODO: associate work and job
+  }
+
   render() {
     return (
       <div>
@@ -41,7 +42,6 @@ class HelloManager extends Component {
         <Link to="/helloManager/newJob">
           <button>Make a new Job!</button>
         </Link>
-        {/* TODO: grab their jobs */}
         <List>
           {this.state.manager.Jobs.map(job => {
             console.log(job)
@@ -52,6 +52,7 @@ class HelloManager extends Component {
                 address={job.address}
                 pay={job.pay}
                 hours={job.hours}
+                handleClick={this.handleOnClick}
               />
             )
           })}
