@@ -2,35 +2,37 @@ import React, { Component } from "react";
 import { List, ListItem } from "./List";
 // import API from "../utils/API";
 import jobs from "./jobs.json";
+import API from "../utils/API";
 
 
 
 class WorkerDash extends Component {
     state = {
-        jobs
+        jobs,
+        jobList: []
     };
-    // componentDidMount() {
-    //     this.loadJobs();
-    // };
+    componentDidMount() {
+        this.loadJobs();
+    };
 
-    // loadJobs = () => {
-    //     API.getJobs()
-    //         .then(res =>
-    //             this.setState({ jobs: res.data })
-    //         )
-    //         .catch(err => console.log(err));
-    // };
+    loadJobs = () => {
+        API.getJoblist()
+            .then(res =>
+                this.setState({ jobList: res.data })
+            )
+            .catch(err => console.log(err));
+    };
+
 
     render() {
         return (
                 <List>
-                    {jobs.map(job => {
-                        console.log(job)
+                    {this.state.jobList.map(job => {
                         return (
                             <ListItem
                                 key={job.id}
                                 position={job.position}
-                                img={job.img}
+                                img={this.state.jobs[0].img}
                                 address={job.address}
                                 pay={job.pay}
                                 hours={job.hours}
