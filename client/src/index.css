@@ -2,5 +2,15 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    /*background-color: rgba(138, 219, 254, 0.509);*/
+    background-image: url("https://www.quotemaster.org/images/48/481ed45c72bad706642d3f5744588345.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
+
+h1 {
+    color: rgb(6, 49, 123);
+}
+
   

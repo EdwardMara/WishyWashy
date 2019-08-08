@@ -1,7 +1,7 @@
 const Validator = require("validator");
 const isEmpty = require("./isEmpty");
 
-module.exports = function validateRegisterWorkerData (data) {
+module.exports = function validateRegisterWorkerData(data) {
   var errors = {};
 
   data.firstName = !isEmpty(data.firstName) ? data.firstName : "";
@@ -32,8 +32,10 @@ module.exports = function validateRegisterWorkerData (data) {
 
   if (Validator.isEmpty(data.phone)) {
     errors.phone = "Phone field is required";
-  }
-  if (Validator.isMobilePhone(data.phone, "any")) {
+  } else if (
+    /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(data.phone) ===
+    false
+  ) {
     errors.phone = "Phone field is invalid";
   }
 
@@ -60,5 +62,5 @@ module.exports = function validateRegisterWorkerData (data) {
   return {
     errors,
     isValid: isEmpty(errors)
-  }
-}
+  };
+};

@@ -7,8 +7,8 @@ import { setCurrentUser, logout } from "./actions/authActions";
 import { Provider } from "react-redux";
 import store from "./store";
 
-import WorkerRoute from "./utils/WorkerRoute";
-import ManagerRoute from "./utils/ManagerRoute";
+//import WorkerRoute from "./utils/WorkerRoute";
+//import ManagerRoute from "./utils/ManagerRoute";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
