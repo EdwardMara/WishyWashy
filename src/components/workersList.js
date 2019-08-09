@@ -1,16 +1,19 @@
 import React, { Component } from "react";
-import { List, ListItem } from "./workerListItem";
+import { WorkerUList, WorkerListItem } from "./workerListItem";
 import { connect } from 'react-redux';
 import API from "../utils/API";
 
 class WorkerList extends Component {
     state = {
       jobId: this.props.match.params.id,
-      workers: []
+      job: { Workers:[] }
     }
 
     componentDidMount() {
-      API.
+      API.workerGrab(this.state.jobId)
+      .then((job) => {
+        this.setState({ job: job.data })
+      })
     }
 
     componentWillReceiveProps(nextProps) {
@@ -22,7 +25,18 @@ class WorkerList extends Component {
     render() {
         return (
             <div>
-
+              <WorkerUList>
+                {this.state.job.Workers.map(worker => {
+                  return (
+                    <WorkerListItem 
+                    name={worker.firstName+ " " + worker.lastName}
+                    address={worker.address}
+                    email={worker.email}
+                    phone={worker.phone}
+                    />
+                  )
+                })}
+              </WorkerUList>
             </div>
         )
     }

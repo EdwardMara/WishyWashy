@@ -4,14 +4,14 @@ import "./style.css";
 
 
 // This file exports both the List and ListItem components
-export function workerList({ children }) {
+export function WorkerUList({ children }) {
     return <section className="mw7 center avenir">
         <h2 className="baskerville fw1 ph3 ph0-l">Jobs</h2>
         {children}
     </section>
 }
 
-export function workerListItem(props) {
+export function WorkerListItem(props) {
     return (
         <article className="bt bb b--black-10 shadow-1">
             <a className="db pv4 ph3 ph0-l no-underline black dim" href="#0">
