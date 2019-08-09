@@ -43,7 +43,9 @@ class App extends Component {
     return (
       <div>
         <Provider store={store}>
-          <Router>
+          <Router
+            basename="/WishyWashy"
+          >
             <div className="App">
               <LoginNavbar />
               <Route exact path="/" component={Landing} />
