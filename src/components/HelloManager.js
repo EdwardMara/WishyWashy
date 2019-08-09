@@ -5,10 +5,11 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import API from '../utils/API';
 import { List, ListItem } from "./List";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class HelloManager extends Component {
   state = {
-    manager: {Jobs:[]}
+    manager: { Jobs: [] }
   }
 
   componentDidMount() {
@@ -16,13 +17,9 @@ class HelloManager extends Component {
     API.getManager(auth.user.id)
       .then((manager) => {
         this.setState({ manager: manager.data })
-        console.log(this.state.manager.Jobs)
       })
       .catch()
   }
-
-
-
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth) {
@@ -34,25 +31,31 @@ class HelloManager extends Component {
     this.setState({ [event.target.name]: event.target.value })
   }
 
+  handleOnClick = (job) => {
+    console.log(job)
+  }
+
   render() {
     return (
       <div>
         <h2>Manager Dashboard</h2>
-        <Link to="/helloManager/newJob">
+        <Link to="/Manager/newJob">
           <button>Make a new Job!</button>
         </Link>
-        {/* TODO: grab their jobs */}
         <List>
           {this.state.manager.Jobs.map(job => {
-            console.log(job)
             return (
-              <ListItem
-                key={job.id}
-                position={job.position}
-                address={job.address}
-                pay={job.pay}
-                hours={job.hours}
-              />
+              <Link to={`/Manager/workerList/${job.id}`}>
+                <ListItem
+                  key={job.id}
+                  indentifier={job.id}
+                  position={job.position}
+                  address={job.address}
+                  pay={job.pay}
+                  hours={job.hours}
+                  handleClick={this.handleOnClick}
+                />
+              </Link>
             )
           })}
         </List>
