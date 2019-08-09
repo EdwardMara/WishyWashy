@@ -17,5 +17,8 @@ export default {
   },
   getWorker: function(id) {
     return axios.get(`https://wishywashy-api.herokuapp.com/api/profile/worker/${id}`)
+  },
+  workerGrab: function(id) {
+    return axios.get(`https://wishywashy-api.herokuapp.com/api/job/workers/${id}`)
   }
 };
