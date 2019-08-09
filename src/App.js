@@ -44,7 +44,7 @@ class App extends Component {
       <div>
         <Provider store={store}>
           <Router
-        
+          basename="/WishyWashy"
           >
             <div className="App">
               <LoginNavbar />
