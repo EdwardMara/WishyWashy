@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { List, ListItem } from "./List";
+
 import { connect } from 'react-redux';
-// import API from "../utils/API";
+
 import jobs from "./jobs.json";
 import API from "../utils/API";
 
