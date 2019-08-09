@@ -6,7 +6,7 @@ export default () => {
             <p>
             Copyright &copy; { new Date().getFullYear() } Wishy Washy
             </p>
-            <a href='/termsAndConditions'>Terms &amp; Conditions</a>
+            <a href='WishyWashy/termsAndConditions'>Terms &amp; Conditions</a>
         </footer>
     );
 };
