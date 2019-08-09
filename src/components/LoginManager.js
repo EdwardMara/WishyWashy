@@ -73,7 +73,7 @@ class LoginManager extends Component {
                   error={errors.password}
                 />
                 <input type="submit" className="btn btn-primary btn-block mt-4" />
-                <a href="/registerManager">Register</a>
+                <a href="WishyWashy/registerManager">Register</a>
               </form>
             </div>
           </div>

@@ -51,14 +51,14 @@ class App extends Component {
               <LoginNavbar />
               <Route exact path="/" component={Landing} />
               <div className="container">
-                <Route exact path="WishyWashy/registerWorker" component={RegisterWorker} />
-                <Route exact path="WishyWashy/registerManager" component={RegisterManager} />
-                <Route exact path="WishyWashy/loginWorker" component={LoginWorker} />
-                <Route exact path="WishyWashy/loginManager" component={LoginManager} />
-                <Route exact path="WishyWashy/helloWorker" component={WorkerDash} />
-                <Route path="WishyWashy/helloManager" component={HelloManager} />
-                <Route exact path="WishyWashy/Manager/newJob" component={NewJobForm} />
-                <Route exact path="WishyWashy/Manager/workerList/:id" component={WorkerList} />
+                <Route exact path="/registerWorker" component={RegisterWorker} />
+                <Route exact path="/registerManager" component={RegisterManager} />
+                <Route exact path="/loginWorker" component={LoginWorker} />
+                <Route exact path="/loginManager" component={LoginManager} />
+                <Route exact path="/helloWorker" component={WorkerDash} />
+                <Route path="/helloManager" component={HelloManager} />
+                <Route exact path="/Manager/newJob" component={NewJobForm} />
+                <Route exact path="/Manager/workerList/:id" component={WorkerList} />
               </div>
               <Footer />
             </div>

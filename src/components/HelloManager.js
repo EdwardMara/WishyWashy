@@ -39,13 +39,13 @@ class HelloManager extends Component {
     return (
       <div>
         <h2>Manager Dashboard</h2>
-        <Link to="/Manager/newJob">
+        <Link to="WishyWashy/Manager/newJob">
           <button>Make a new Job!</button>
         </Link>
         <List>
           {this.state.manager.Jobs.map(job => {
             return (
-              <Link to={`/Manager/workerList/${job.id}`}>
+              <Link to={`WishyWashy/Manager/workerList/${job.id}`}>
                 <ListItem
                   key={job.id}
                   indentifier={job.id}
