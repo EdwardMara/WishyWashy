@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/WishyWashy/static/css/main.86e32d36.chunk.css",
-    "main.js": "/WishyWashy/static/js/main.584ecf50.chunk.js",
-    "main.js.map": "/WishyWashy/static/js/main.584ecf50.chunk.js.map",
+    "main.js": "/WishyWashy/static/js/main.509b0970.chunk.js",
+    "main.js.map": "/WishyWashy/static/js/main.509b0970.chunk.js.map",
     "runtime~main.js": "/WishyWashy/static/js/runtime~main.9122631e.js",
     "runtime~main.js.map": "/WishyWashy/static/js/runtime~main.9122631e.js.map",
     "static/js/2.e6241bbc.chunk.js": "/WishyWashy/static/js/2.e6241bbc.chunk.js",
     "static/js/2.e6241bbc.chunk.js.map": "/WishyWashy/static/js/2.e6241bbc.chunk.js.map",
     "index.html": "/WishyWashy/index.html",
-    "precache-manifest.ab95a727c86ed4d3cace236492aaad25.js": "/WishyWashy/precache-manifest.ab95a727c86ed4d3cace236492aaad25.js",
+    "precache-manifest.1b93d650d5e342e8ba09d8227b50cbfb.js": "/WishyWashy/precache-manifest.1b93d650d5e342e8ba09d8227b50cbfb.js",
     "service-worker.js": "/WishyWashy/service-worker.js",
     "static/css/main.86e32d36.chunk.css.map": "/WishyWashy/static/css/main.86e32d36.chunk.css.map",
     "static/media/logo.svg": "/WishyWashy/static/media/logo.5d5d9eef.svg"
