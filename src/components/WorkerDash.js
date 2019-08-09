@@ -13,6 +13,7 @@ class WorkerDash extends Component {
         jobList: [],
         worker: {}
     };
+    
     componentDidMount() {
         this.loadJobs();
         const { auth } = this.props;

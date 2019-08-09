@@ -53,8 +53,9 @@ class App extends Component {
                 <Route exact path="/loginWorker" component={LoginWorker} />
                 <Route exact path="/loginManager" component={LoginManager} />
                 <Route exact path="/helloWorker" component={WorkerDash} />
-                <Route exact path="/helloManager" component={HelloManager} />
-                <Route exact path="/helloManager/newJob" component={NewJobForm} />
+                <Route path="/helloManager" component={HelloManager} />
+                <Route exact path="/Manager/newJob" component={NewJobForm} />
+                <Route exact path="/Manager/workerList/:id" component={NewJobForm} />
               </div>
               <Footer />
             </div>

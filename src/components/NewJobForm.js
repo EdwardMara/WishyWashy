@@ -36,6 +36,7 @@ class NewJobForm extends Component {
       API.postJob(job)
       .then(res => {
         console.log(res)
+        window.location.assign('/helloManager')
       })
       .catch(err => this.setState({ error: err.message}))
     }
