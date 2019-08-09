@@ -13,7 +13,7 @@ export function List({ children }) {
 
 export function ListItem(props) {
     return (
-        <article className="bt bb b--black-10 shadow-1">
+        <article className="bt bb b--black-10 shadow-1" onClick={() => props.handleClick(props.identifier)}>
             <a className="db pv4 ph3 ph0-l no-underline black dim" href="#0">
                 <div className="flex flex-wrap-ns flex-column-ns">
                     <div className="pr3-ns mb4 mb0-ns w-100 w-40-ns">
