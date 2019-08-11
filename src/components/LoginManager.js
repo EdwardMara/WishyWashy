@@ -6,9 +6,9 @@ import { loginManager } from "../actions/authActions";
 import TextFieldGroup from "./TextFieldGroup";
 import Link from 'react-router/lib/Link';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
-import Typography from 'material-ui/Typography';
+// import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
-import muiLogo from 'docs/src/assets/images/material-ui-logo.svg';
+// import muiLogo from 'docs/src/assets/images/material-ui-logo.svg';
 
 class LoginManager extends Component {
   constructor() {
