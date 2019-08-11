@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e67ba923b671a0203cea6c9d2c5c4939",
+    "revision": "731dbb17941d150a086666c643a88bd1",
     "url": "/WishyWashy/index.html"
   },
   {
-    "revision": "abf915cfce843141b5aa",
+    "revision": "0bf16e512a9dbb7b915f",
     "url": "/WishyWashy/static/css/main.03b9f6c3.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/WishyWashy/static/js/2.411321c0.chunk.js"
   },
   {
-    "revision": "abf915cfce843141b5aa",
-    "url": "/WishyWashy/static/js/main.e5354988.chunk.js"
+    "revision": "0bf16e512a9dbb7b915f",
+    "url": "/WishyWashy/static/js/main.3480f68a.chunk.js"
   },
   {
     "revision": "db9ba3db672adf71e7d0",
