@@ -44,7 +44,7 @@ class App extends Component {
       <div>
         <Provider store={store}>
           <Router
-          basename="/WishyWashy"
+          basename={process.env.PUBLIC_URL}
           >
             <div className="App">
               <LoginNavbar />
