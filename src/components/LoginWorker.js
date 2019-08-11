@@ -4,6 +4,7 @@ import { withRouter } from "react-router-dom";
 import { connect } from 'react-redux';
 import { loginWorker } from '../actions/authActions';
 import TextFieldGroup from './TextFieldGroup';
+import { Link } from 'react-router-dom';
 
 class LoginWorker extends Component {
   constructor() {

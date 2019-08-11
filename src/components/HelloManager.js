@@ -31,10 +31,6 @@ class HelloManager extends Component {
     this.setState({ [event.target.name]: event.target.value })
   }
 
-  handleOnClick = (job) => {
-    console.log(job)
-  }
-
   render() {
     return (
       <div>
@@ -53,7 +49,6 @@ class HelloManager extends Component {
                   address={job.address}
                   pay={job.pay}
                   hours={job.hours}
-                  handleClick={this.handleOnClick}
                 />
               </Link>
             )
