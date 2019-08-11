@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { loginManager } from "../actions/authActions";
 import TextFieldGroup from "./TextFieldGroup";
-import Link from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import { withStyles, createStyleSheet } from 'material-ui/styles';
 // import Typography from 'material-ui/Typography';
 import Button from '@material-ui/core/Button';
