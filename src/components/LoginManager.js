@@ -82,7 +82,7 @@ class LoginManager extends Component {
                   component={Link}
                   // className={classes.button}
                   raised
-                  to="/WishyWashy/registerManager"
+                  to="/registerManager"
                 >
                   {'Register'}
                 </Button>
