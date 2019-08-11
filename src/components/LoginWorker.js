@@ -74,7 +74,7 @@ class LoginWorker extends Component {
                   error={errors.password}
                 />
                 <input type="submit" className="btn btn-primary btn-block mt-4" />
-                <a href="/registerWorker">Register</a>
+                <a href="WishyWashy/registerWorker">Register</a>
               </form>
             </div>
           </div>
