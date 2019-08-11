@@ -80,7 +80,7 @@ class LoginManager extends Component {
                 <input type="submit" className="btn btn-primary btn-block mt-4" />
                 <Button
                   component={Link}
-                  className={classes.button}
+                  // className={classes.button}
                   raised
                   to="/WishyWashy/registerManager"
                 >
