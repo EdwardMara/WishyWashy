@@ -4,6 +4,11 @@ import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { loginManager } from "../actions/authActions";
 import TextFieldGroup from "./TextFieldGroup";
+import { Link } from 'react-router-dom';
+// import { withStyles, createStyleSheet } from 'material-ui/styles';
+// import Typography from 'material-ui/Typography';
+import Button from '@material-ui/core/Button';
+// import muiLogo from 'docs/src/assets/images/material-ui-logo.svg';
 
 class LoginManager extends Component {
   constructor() {
@@ -50,11 +55,8 @@ class LoginManager extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Log In</h1>
-              <p className="lead text-center">
-                Log in to your Manager account
-              </p>
-              <form onSubmit={this.onSubmit}>
+              <form onSubmit={this.onSubmit} className="form-login">
+
                 <TextFieldGroup
                   placeholder="Email Address"
                   name="email"
@@ -73,7 +75,15 @@ class LoginManager extends Component {
                   error={errors.password}
                 />
                 <input type="submit" className="btn btn-primary btn-block mt-4" />
-                <a href="/registerManager">Register</a>
+                <Button
+                  component={Link}
+                  // className={classes.button}
+                  raised
+                  to="/registerManager"
+                >
+                  {'Register'}
+                </Button>
+                {/* <a href="WishyWashy/registerManager">Register</a> */}
               </form>
             </div>
           </div>

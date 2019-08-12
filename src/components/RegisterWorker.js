@@ -60,11 +60,7 @@ class RegisterWorker extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Register</h1>
-              <p className="lead text-center">
-                Create Worker account.
-              </p>
-              <form noValidate onSubmit={this.onSubmit}>
+              <form noValidate onSubmit={this.onSubmit} className="form-login">
                 <TextFieldGroup
                   placeholder="First Name"
                   name="firstName"

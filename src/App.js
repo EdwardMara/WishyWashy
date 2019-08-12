@@ -12,8 +12,8 @@ import { setCurrentUser, logout } from "./actions/authActions";
 import { Provider } from "react-redux";
 import store from "./store";
 
-// import WorkerRoute from "./utils/WorkerRoute";
-// import ManagerRoute from "./utils/ManagerRoute";
+import WorkerRoute from "./utils/WorkerRoute";
+import ManagerRoute from "./utils/ManagerRoute";
 
 import Footer from "./components/Footer";
 import Landing from "./components/Landing";
@@ -26,7 +26,6 @@ import HelloManager from "./components/HelloManager";
 import LoginNavbar from "./components/LoginNavbar"
 import WorkerDash from "./components/WorkerDash"
 import NewJobForm from "./components/NewJobForm"
-import WorkerList from "./components/workersList"
 
 
 class App extends Component {
@@ -45,7 +44,7 @@ class App extends Component {
       <div>
         <Provider store={store}>
           <Router
-            basename="/WishyWashy"
+          basename={process.env.PUBLIC_URL}
           >
             <div className="App">
               <LoginNavbar />
@@ -56,9 +55,8 @@ class App extends Component {
                 <Route exact path="/loginWorker" component={LoginWorker} />
                 <Route exact path="/loginManager" component={LoginManager} />
                 <Route exact path="/helloWorker" component={WorkerDash} />
-                <Route path="/helloManager" component={HelloManager} />
-                <Route exact path="/Manager/newJob" component={NewJobForm} />
-                <Route exact path="/Manager/workerList/:id" component={WorkerList} />
+                <Route exact path="/helloManager" component={HelloManager} />
+                <Route exact path="/helloManager/newJob" component={NewJobForm} />
               </div>
               <Footer />
             </div>

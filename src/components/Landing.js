@@ -11,12 +11,11 @@ class Landing extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-md-12 text-center">
-            <h1 className="display-3 mb-4">Wishy Washy</h1>
-            <Link to="/loginWorker" className="btn btn-lg btn-primary mr-2">
+          <div className="col-md-12 text-center height-100">
+            <Link to="/loginWorker" className="btn starter-buttons">
               Worker Login
             </Link>
-            <Link to="/loginManager" className="btn btn-lg btn-primary mr-2">
+            <Link to="/loginManager" className="btn starter-buttons">
               Manager Login
             </Link>
           </div>
