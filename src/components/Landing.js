@@ -11,7 +11,7 @@ class Landing extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-md-12 text-center height-100">
+          <div className="text-center form-login landing-size">
             <Link to="/loginWorker" className="btn starter-buttons">
               Worker Login
             </Link>
