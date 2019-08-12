@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/WishyWashy/static/css/main.03b9f6c3.chunk.css",
-    "main.js": "/WishyWashy/static/js/main.130dcea1.chunk.js",
-    "main.js.map": "/WishyWashy/static/js/main.130dcea1.chunk.js.map",
+    "main.css": "/WishyWashy/static/css/main.66e95960.chunk.css",
+    "main.js": "/WishyWashy/static/js/main.3283d6c1.chunk.js",
+    "main.js.map": "/WishyWashy/static/js/main.3283d6c1.chunk.js.map",
     "runtime~main.js": "/WishyWashy/static/js/runtime~main.9122631e.js",
     "runtime~main.js.map": "/WishyWashy/static/js/runtime~main.9122631e.js.map",
-    "static/js/2.f1224441.chunk.js": "/WishyWashy/static/js/2.f1224441.chunk.js",
-    "static/js/2.f1224441.chunk.js.map": "/WishyWashy/static/js/2.f1224441.chunk.js.map",
+    "static/js/2.db778a8e.chunk.js": "/WishyWashy/static/js/2.db778a8e.chunk.js",
+    "static/js/2.db778a8e.chunk.js.map": "/WishyWashy/static/js/2.db778a8e.chunk.js.map",
     "index.html": "/WishyWashy/index.html",
-    "precache-manifest.3b081b700f1132c377b05d62b7d17e05.js": "/WishyWashy/precache-manifest.3b081b700f1132c377b05d62b7d17e05.js",
+    "precache-manifest.762e60b94a0c530f19812ce063463b81.js": "/WishyWashy/precache-manifest.762e60b94a0c530f19812ce063463b81.js",
     "service-worker.js": "/WishyWashy/service-worker.js",
-    "static/css/main.03b9f6c3.chunk.css.map": "/WishyWashy/static/css/main.03b9f6c3.chunk.css.map",
-    "static/media/logo.svg": "/WishyWashy/static/media/logo.5d5d9eef.svg"
+    "static/css/main.66e95960.chunk.css.map": "/WishyWashy/static/css/main.66e95960.chunk.css.map",
+    "static/media/logo.svg": "/WishyWashy/static/media/logo.5d5d9eef.svg",
+    "static/media/wishywashylogo.png": "/WishyWashy/static/media/wishywashylogo.bc127b11.png"
   }
 }
