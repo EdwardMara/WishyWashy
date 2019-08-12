@@ -70,7 +70,7 @@ class LoginWorker extends Component {
                   error={errors.password}
                 />
                 <input type="submit"/>
-                <a href="WishyWashy/registerWorker">Register</a>
+                <a href="/registerWorker">Register</a>
               </form>
             </div>
           </div>
