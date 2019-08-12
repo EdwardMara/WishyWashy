@@ -55,11 +55,8 @@ class LoginManager extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Log In</h1>
-              <p className="lead text-center">
-                Log in to your Manager account
-              </p>
               <form onSubmit={this.onSubmit} className="form-login">
+
                 <TextFieldGroup
                   placeholder="Email Address"
                   name="email"

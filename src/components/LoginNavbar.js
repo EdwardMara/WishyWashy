@@ -5,6 +5,7 @@ import { withRouter } from "react-router-dom";
 import { connect } from 'react-redux';
 import { logout } from '../actions/authActions';
 //import logo from '../../img/logo.png'
+import logo from '../img/wishywashylogo.png'
 
 class Navbar extends Component {
   onLogoutClick(evt) {
@@ -57,7 +58,7 @@ class Navbar extends Component {
         <div className="container">
           <Link className="navbar-brand" to="/">
             <img
-              src="https://previews.123rf.com/images/tilo/tilo1212/tilo121200004/16829339-transparent-blue-soap-bubbles-over-white-background.jpg"
+              src={logo}
               style={{ width: '200px', margin: 'auto', display: 'block' }}
               alt="Loading..."
             />
