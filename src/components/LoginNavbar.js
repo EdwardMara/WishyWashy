@@ -5,6 +5,7 @@ import { withRouter } from "react-router-dom";
 import { connect } from 'react-redux';
 import { logout } from '../actions/authActions';
 //import logo from '../../img/logo.png'
+import logo from '../img/wishywashylogo.png'
 
 class Navbar extends Component {
   onLogoutClick(evt) {
@@ -20,7 +21,7 @@ class Navbar extends Component {
     const authLinks = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
-          <a href="/" onClick={ this.onLogoutClick.bind(this) } className="nav-link">
+          <a href="/" onClick={ this.onLogoutClick.bind(this) }>
             Logout
           </a>
         </li>
@@ -53,11 +54,11 @@ class Navbar extends Component {
     );
 
     return (
-      <nav className="navbar navbar-expand-sm navbar-light bg-light mb-4">
+      <nav className="navbar navbar-expand-sm navbar-light mb-4">
         <div className="container">
           <Link className="navbar-brand" to="/">
             <img
-              src="https://previews.123rf.com/images/tilo/tilo1212/tilo121200004/16829339-transparent-blue-soap-bubbles-over-white-background.jpg"
+              src={logo}
               style={{ width: '200px', margin: 'auto', display: 'block' }}
               alt="Loading..."
             />
@@ -71,7 +72,7 @@ class Navbar extends Component {
           </button>
 
           <div className="collapse navbar-collapse" id="mobile-nav">
-            {isAuthenticated ? authLinks : guestLinks}
+            {isAuthenticated ? authLinks : ""}
           </div>
         </div>
       </nav>

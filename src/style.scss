@@ -1,0 +1,296 @@
+// colorpalette
+$background-color: #3f5866;
+$content-color: #f0f0df;
+$light-color: #BDD3DE;
+$border-color: #2B3A42;
+$title-color: #FFD938;
+
+nav {
+    // background-color: $background-color;
+    background-image: linear-gradient(75deg, $border-color , #4e6d7e);
+    border-bottom: 1px solid $border-color;
+    img {
+        height: 100px;
+        width: 100px;
+    }
+    a {
+        text-decoration: none;
+        color: $title-color;
+    }
+}
+body {
+    background-color: $content-color;
+}
+.form-login {
+    font-family: 'Ubuntu', 'Lato', sans-serif;
+    font-weight: 400;
+    /* Size and position */
+    width: 300px;
+    position: relative;
+    margin: 60px auto 30px;
+    padding: 10px;
+    overflow: hidden;
+
+    /* Styles */
+    background: $border-color; 
+    border-radius: 0.4em;
+    border: 1px solid #191919;
+    box-shadow: 
+        inset 0 0 2px 1px rgba(255,255,255,0.08), 
+        0 16px 10px -8px rgba(0, 0, 0, 0.6);
+
+    h5 {
+        color: $title-color;
+        font-size: 0.25;
+    }
+
+    label {
+        /* Size and position */
+        width: 50%;
+        float: left;
+        padding-top: 9px;
+    
+        /* Styles */
+        color: $title-color;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-shadow: 0 1px 0 #000;
+        text-indent: 10px;
+        font-weight: 700;
+        cursor: pointer;
+        &:hover {
+            background: #27292c;
+        }
+    }
+
+    input{
+        width: 50%;
+        float: left;
+        padding: 8px 5px;
+        margin-bottom: 10px;
+        font-size: 12px;
+    
+        /* Styles */
+        background: linear-gradient(#1f2124, #27292c);    
+        border: 1px solid #000;
+        box-shadow:
+            0 1px 0 rgba(255,255,255,0.1);
+        border-radius: 3px;
+    
+        /* Font styles */
+        font-family: 'Ubuntu', 'Lato', sans-serif;
+        color: #fff;
+        &:hover {
+            background: #27292c;
+        }
+        &:focus {
+            color: #fff;
+            box-shadow: inset 0 0 2px #000;
+            background: #494d54;
+            border-color: #51cbee;
+            outline: none;
+        }
+    }
+
+    input[type=submit] {
+                /* Width and position */
+        width: 100%;
+        padding: 8px 5px;
+        
+        /* Styles */
+        border: 1px solid #0273dd; /* Fallback */
+        border: 1px solid $title-color;
+        box-shadow:
+            inset 0 1px 0 rgba(255,255,255,0.3),
+            inset 0 10px 10px rgba(255,255,255,0.1);
+        border-radius: 3px;
+        background: $border-color;
+        cursor:pointer;
+        
+        /* Font styles */
+        font-family: 'Ubuntu', 'Lato', sans-serif;
+        color: $title-color;
+        font-weight: 700;
+        font-size: 15px;
+        text-shadow: 0 -1px 0 rgba(0,0,0,0.8);
+        &:hover{
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+        }
+        &:active{
+            background: #287db5;
+            box-shadow: inset 0 0 3px rgba(0,0,0,0.6);
+            border-color: #000; /* Fallback */
+            border-color: rgba(0,0,0,0.9);
+        }
+    }
+
+    .no-boxshadow .form-login input[type=submit]:hover {
+        background: #2a92d8;
+    }
+
+    a {
+        width: 50%;
+    
+        /* Styles */
+        color: $title-color;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-shadow: 0 1px 0 #000;
+        text-indent: 10px;
+        font-weight: 700;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover {
+            color: darken( $title-color, 20% );
+        }
+    }
+
+    &:after{
+           /* Size and position */
+    content: "";
+    height: 1px;
+    width: 33%;
+    position: absolute;
+    left: 20%;
+    top: 0;
+
+    /* Styles */
+    background: linear-gradient(left, transparent, #444, #b6b6b8, #444, transparent);
+    }
+
+    &:before{
+        content: "";
+        width: 8px;
+        height: 5px;
+        position: absolute;
+        left: 34%;
+        top: -7px;
+        
+        /* Styles */
+        border-radius: 50%;
+        box-shadow: 0 0 6px 4px #fff;
+    }
+
+    div:nth-child(1):before{
+        /* Size and position */
+        content: "";
+        width: 250px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: 45px;
+    
+        /* Styles */
+        transform: rotate(75deg);
+        background: linear-gradient(50deg, rgba(255,255,255,0.15), rgba(0,0,0,0));
+        pointer-events: none;
+    }
+
+    .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.height-100 {
+    height: 60vh;
+}
+
+.avenir{
+    .job-header {
+        font-family: Arial, Helvetica, sans-serif;
+        color: $title-color;
+        font-weight: bold;
+        text-shadow:
+		-1px -1px 0 $border-color,
+		1px -1px 0 $border-color,
+		-1px 1px 0 $border-color,
+		1px 1px 0 $border-color;
+    }
+}
+
+.list-item {
+    // background-color: $background-color;
+    background-image: linear-gradient(75deg, $border-color , #4e6d7e);
+    .w-100 {
+        color: $title-color;
+    }
+    img {
+        width: 75%;
+        height: auto;
+    }
+}
+
+.starter-buttons {
+    width: 25%;
+    background-color: $background-color;
+    border: $border-color;
+    margin: 1em;
+    
+    /* Styles */
+    color: $title-color;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 0 #000;
+    text-indent: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+        color: darken( $title-color, 20% );
+    }
+}
+
+
+footer {
+    background-color: $background-color;
+    
+    p {
+        color: $title-color;
+    }
+    a {
+        text-decoration: none;
+        color: $title-color;
+        &:hover{
+            color: darken( $title-color, 20% );
+        }
+    }
+}
+
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
