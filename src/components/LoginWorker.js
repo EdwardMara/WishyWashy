@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { loginWorker } from '../actions/authActions';
 import TextFieldGroup from './TextFieldGroup';
 import { Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 
 class LoginWorker extends Component {
   constructor() {
@@ -70,7 +71,14 @@ class LoginWorker extends Component {
                   error={errors.password}
                 />
                 <input type="submit"/>
-                <a href="/registerWorker">Register</a>
+                <Button
+                  component={Link}
+                  // className={classes.button}
+                  raised
+                  to="/registerWorker"
+                >
+                  {'Register'}
+                </Button>
               </form>
             </div>
           </div>
