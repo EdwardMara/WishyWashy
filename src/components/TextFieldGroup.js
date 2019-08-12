@@ -13,9 +13,11 @@ const TextFieldGroup = ({
   disabled
 }) => {
   return (
-    <div className="form-group">
+    <div className="form-group clearfix">
+      <label for={name}>{name.charAt(0).toUpperCase()+name.slice(1)}:</label>
       <input
         type={type}
+        id={name}
         className={classnames('form-control form-control-lg', {
           'is-invalid': error
         })}

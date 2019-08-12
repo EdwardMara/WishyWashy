@@ -54,7 +54,7 @@ class LoginManager extends Component {
               <p className="lead text-center">
                 Log in to your Manager account
               </p>
-              <form onSubmit={this.onSubmit}>
+              <form onSubmit={this.onSubmit} className="form-login">
                 <TextFieldGroup
                   placeholder="Email Address"
                   name="email"
