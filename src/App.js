@@ -26,6 +26,7 @@ import HelloManager from "./components/HelloManager";
 import LoginNavbar from "./components/LoginNavbar"
 import WorkerDash from "./components/WorkerDash"
 import NewJobForm from "./components/NewJobForm"
+import WorkerList from "./components/workersList"
 
 
 class App extends Component {
@@ -56,7 +57,8 @@ class App extends Component {
                 <Route exact path="/loginManager" component={LoginManager} />
                 <Route exact path="/helloWorker" component={WorkerDash} />
                 <Route exact path="/helloManager" component={HelloManager} />
-                <Route exact path="/helloManager/newJob" component={NewJobForm} />
+                <Route exact path="/Manager/newJob" component={NewJobForm} />
+                <Route exact path="/Manager/workerList/:id" component={WorkerList} />
               </div>
               <Footer />
             </div>
