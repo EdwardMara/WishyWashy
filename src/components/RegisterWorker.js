@@ -4,19 +4,23 @@ import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { registerWorker } from "../actions/authActions";
 import TextFieldGroup from "./TextFieldGroup";
+import ReactFilestack from 'filestack-react';
+
+// TODO: push uploaded docs to array in state and update constructor for new worker
 
 class RegisterWorker extends Component {
   constructor() {
     super();
     this.state = {
-        firstName: "",
-        lastName: "",
-        address: "",
-        phone: "",
-        email: "",
-        password: "",
-        password2: "",
-        errors: {}
+      firstName: "",
+      lastName: "",
+      address: "",
+      phone: "",
+      email: "",
+      password: "",
+      password2: "",
+      docs: [],
+      errors: {}
     };
 
     this.onChange = this.onChange.bind(this);
@@ -46,7 +50,8 @@ class RegisterWorker extends Component {
       phone: this.state.phone,
       email: this.state.email,
       password: this.state.password,
-      password2: this.state.password2
+      password2: this.state.password2,
+      docs: this.state.docs
     };
 
     this.props.registerWorker(newWorker, this.props.history);
@@ -113,6 +118,17 @@ class RegisterWorker extends Component {
                   value={this.state.password2}
                   onChange={this.onChange}
                   error={errors.password2}
+                />
+                <ReactFilestack
+                  apikey={"AC0wjdv5JTa3WfKjaU2wnz"}
+                  componentDisplayMode={{
+                    type: 'button',
+                    customText: 'Upload Docs',
+                    customClass: 'some-custom-class'
+                  }}
+                  onSuccess={(res) => {
+                    console.log(res);
+                  }}
                 />
                 <input type="submit" className="btn btn-primary btn-block mt-4" />
               </form>
