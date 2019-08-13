@@ -4,20 +4,24 @@ import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { registerManager } from "../actions/authActions";
 import TextFieldGroup from "./TextFieldGroup";
+import ReactFilestack from 'filestack-react';
+
+// TODO: link image url from filestack to state and manager constructor
 
 class RegisterManager extends Component {
   constructor() {
     super();
     this.state = {
-        firstName: "",
-        lastName: "",
-        companyName: "",
-        address: "",
-        phone: "",
-        email: "",
-        password: "",
-        password2: "",
-        errors: {}
+      firstName: "",
+      lastName: "",
+      companyName: "",
+      address: "",
+      phone: "",
+      email: "",
+      password: "",
+      password2: "",
+      image: "",
+      errors: {}
     };
 
     this.onChange = this.onChange.bind(this);
@@ -48,7 +52,8 @@ class RegisterManager extends Component {
       phone: this.state.phone,
       email: this.state.email,
       password: this.state.password,
-      password2: this.state.password2
+      password2: this.state.password2,
+      image: this.state.image
     };
 
     this.props.registerManager(newManager, this.props.history);
@@ -123,6 +128,21 @@ class RegisterManager extends Component {
                   onChange={this.onChange}
                   error={errors.password2}
                 />
+                <ReactFilestack
+                  apikey={"AC0wjdv5JTa3WfKjaU2wnz"}
+                  componentDisplayMode={{
+                    type: 'button',
+                    customText: 'Upload Image',
+                    customClass: 'some-custom-class'
+                  }}
+                  onSuccess={(res) => {
+                    console.log(res);
+                    let imageUrl = res.filesUploaded[0].url;
+                    console.log(imageUrl);
+                    this.setState({ image: imageUrl });
+                  }}
+                />
+
                 <input type="submit" className="btn btn-primary btn-block mt-4" />
               </form>
             </div>
