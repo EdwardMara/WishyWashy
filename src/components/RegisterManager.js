@@ -139,6 +139,7 @@ class RegisterManager extends Component {
                     console.log(res);
                     let imageUrl = res.filesUploaded[0].url;
                     console.log(imageUrl);
+                    this.setState({ image: imageUrl });
                   }}
                 />
 
