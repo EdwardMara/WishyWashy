@@ -6,7 +6,6 @@ import "./style.css";
 // This file exports both the List and ListItem components
 export function WorkerUList({ children }) {
     return <section className="mw7 center avenir">
-        <h2 className="baskerville fw1 ph3 ph0-l">Jobs</h2>
         {children}
     </section>
 }

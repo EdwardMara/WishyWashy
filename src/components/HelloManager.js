@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class HelloManager extends Component {
   state = {
+    job: "0",
     manager: { Jobs: [] }
   }
 
@@ -31,6 +32,18 @@ class HelloManager extends Component {
     this.setState({ [event.target.name]: event.target.value })
   }
 
+  onChanges = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  }
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+
+    API.deleteJob(this.state.manager.Jobs[this.state.job - 1].id).then(
+      console.log('deleted')
+    ).catch()
+  }
+
   render() {
     return (
       <div>
@@ -38,6 +51,11 @@ class HelloManager extends Component {
         <Link to="/Manager/newJob">
           <button>Make a new Job!</button>
         </Link>
+        <form onSubmit={this.handleFormSubmit}>
+          <label>Delete a job: </label>
+          <input onChange={this.onChanges} type="number" name="job" min="1" max={String(this.state.manager.Jobs.length)} />
+          <input type="submit"/>
+        </form>
         <List>
           {this.state.manager.Jobs.map(job => {
             return (

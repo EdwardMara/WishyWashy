@@ -23,6 +23,12 @@ class WorkerList extends Component {
     }
   }
 
+  handleOnClick = () => {
+    this.state.job.filled = true
+    API.jobFill(this.state.job)
+    .then(console.log('job updated'))
+  }
+
   render() {
     return (
       <div>
@@ -35,6 +41,7 @@ class WorkerList extends Component {
                   address={worker.address}
                   email={worker.email}
                   phone={worker.phone}
+                  onClick = {this.handleOnClick()}
                 />
               </Link>
             )
