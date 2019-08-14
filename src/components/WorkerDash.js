@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 
 import jobs from "./jobs.json";
 import API from "../utils/API";
+import logo from '../img/wishywashylogo.png'
 
 
 
@@ -14,22 +15,23 @@ class WorkerDash extends Component {
         jobList: [],
         worker: {}
     };
-    
+
     componentDidMount() {
         this.loadJobs();
         const { auth } = this.props;
         API.getWorker(auth.user.id)
-        .then((worker) => {
-          this.setState({ worker: worker.data })
-        })
-        .catch()
+            .then((worker) => {
+                this.setState({ worker: worker.data })
+            })
+            .catch()
+
     };
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.auth) {
-          this.setState({ auth: nextProps.auth });
+            this.setState({ auth: nextProps.auth });
         }
-      }
+    }
 
     loadJobs = () => {
         API.getJoblist()
@@ -39,12 +41,12 @@ class WorkerDash extends Component {
             .catch(err => console.log(err));
     };
 
-    handleOnClick = (job)=>{
+    handleOnClick = (job) => {
         API.takeJob(job, this.state.worker.id)
-        .then(
-            console.log('connection made')
-        )
-        .catch()
+            .then(
+                console.log('connection made')
+            )
+            .catch()
     }
 
 
@@ -57,7 +59,7 @@ class WorkerDash extends Component {
                             key={job.id}
                             identifier={job.id}
                             position={job.position}
-                            img={this.state.jobs[0].img}
+                            img={job.image ? job.image : logo}
                             address={job.address}
                             pay={job.pay}
                             hours={job.hours}
@@ -76,6 +78,6 @@ class WorkerDash extends Component {
 
 const mapStateToProps = state => ({
     auth: state.auth
-  });
+});
 
 export default connect(mapStateToProps)(WorkerDash);

@@ -25,7 +25,6 @@ export function ListItem(props) {
                             <br />
                             {props.pay} for {props.hours} hours
           </p>
-                        <p className="f6 lh-copy mv0">Restaurant name here</p>
                     </div>
                 </div>
             </a>
