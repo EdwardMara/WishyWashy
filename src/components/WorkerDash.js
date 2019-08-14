@@ -63,7 +63,7 @@ class WorkerDash extends Component {
                             address={job.address}
                             pay={job.pay}
                             hours={job.hours}
-                            handleClick={this.handleOnClick}
+                            handleClick={this.handleOnClick(job.id)}
                         />
                     )
                 })}
