@@ -15,6 +15,9 @@ import store from "./store";
 import WorkerRoute from "./utils/WorkerRoute";
 import ManagerRoute from "./utils/ManagerRoute";
 
+import { PropTypes } from 'prop-types';
+import { connect } from 'react-redux';
+
 import Footer from "./components/Footer";
 import Landing from "./components/Landing";
 import RegisterWorker from "./components/RegisterWorker";
@@ -38,7 +41,11 @@ class App extends Component {
   // control the role and render diferent page base on the role
   // call to the backend  return from the db all the jobs
   // update state jobs with the data comming from the db then you will render result
-
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.auth) {
+      this.setState({ auth: nextProps.auth });
+    }
+  }
 
   render() {
     return (
@@ -70,4 +77,13 @@ class App extends Component {
 
 
 }
-export default App;
+
+HelloManager.propTypes = {
+  auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+export default connect(mapStateToProps)(App);
