@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 
 import jobs from "./jobs.json";
 import API from "../utils/API";
+import logo from '../img/wishywashylogo.png'
 
 
 
@@ -52,12 +53,13 @@ class WorkerDash extends Component {
         return (
             <List>
                 {this.state.jobList.map(job => {
+                    console.log(job)
                     return (
                         <ListItem
                             key={job.id}
                             identifier={job.id}
                             position={job.position}
-                            img={this.state.jobs[0].img}
+                            img={job.Manager.image ? job.Manager.image : logo}
                             address={job.address}
                             pay={job.pay}
                             hours={job.hours}

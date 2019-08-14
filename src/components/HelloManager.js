@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import API from '../utils/API';
 import { List, ListItem } from "./List";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import logo from '../img/wishywashylogo.png'
 
 class HelloManager extends Component {
   state = {
@@ -14,10 +15,12 @@ class HelloManager extends Component {
   }
 
   componentDidMount() {
+    localStorage.getItem('jwtToken')
     const { auth } = this.props;
     API.getManager(auth.user.id)
       .then((manager) => {
         this.setState({ manager: manager.data })
+        console.log(this.state.manager)
       })
       .catch()
   }
@@ -45,6 +48,8 @@ class HelloManager extends Component {
   }
 
   render() {
+    const { auth } = this.props;
+
     return (
       <div>
         <h2>Manager Dashboard</h2>
@@ -53,25 +58,29 @@ class HelloManager extends Component {
         </Link>
         <form onSubmit={this.handleFormSubmit}>
           <label>Delete a job: </label>
-          <input onChange={this.onChanges} type="number" name="job" min="1" max={String(this.state.manager.Jobs.length)} />
+          <input onChange={this.onChanges} type="number" name="job" min="1" max="99" />
           <input type="submit"/>
         </form>
-        <List>
-          {this.state.manager.Jobs.map(job => {
-            return (
-              <Link to={`/Manager/workerList/${job.id}`}>
-                <ListItem
-                  key={job.id}
-                  indentifier={job.id}
-                  position={job.position}
-                  address={job.address}
-                  pay={job.pay}
-                  hours={job.hours}
-                />
-              </Link>
-            )
-          })}
-        </List>
+        {auth.isAuthenticated ?
+          <List>
+            {this.state.manager.Jobs.map(job => {
+              return (
+                <Link to={`/Manager/workerList/${job.id}`}>
+                  <ListItem
+                    key={job.id}
+                    indentifier={job.id}
+                    position={job.position}
+                    address={job.address}
+                    pay={job.pay}
+                    hours={job.hours}
+                    img={this.state.manager.image ? this.state.manager.image : logo}
+                  />
+                </Link>
+              )
+            })}
+          </List> :
+          <p>there was a problem loading your jobs</p>
+        }
       </div>
     );
   }
