@@ -20,5 +20,11 @@ export default {
   },
   workerGrab: function(id) {
     return axios.get(`https://wishywashy-api.herokuapp.com/api/job/workers/${id}`)
+  },
+  jobFill: function(job) {
+    return axios.put(`https://wishywashy-api.herokuapp.com/api/filljob`, job)
+  },
+  deleteJob: function(id) {
+    return axios.delete(`https://wishywashy-api.herokuapp.com/api/deletejob/${id}`)
   }
 };

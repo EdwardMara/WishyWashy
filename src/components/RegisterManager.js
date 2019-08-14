@@ -56,6 +56,8 @@ class RegisterManager extends Component {
       image: this.state.image
     };
 
+    console.log(newManager)
+
     this.props.registerManager(newManager, this.props.history);
   }
 

@@ -54,12 +54,17 @@ class WorkerDash extends Component {
         return (
             <List>
                 {this.state.jobList.map(job => {
+                    console.log(job)
                     return (
                         <ListItem
                             key={job.id}
                             identifier={job.id}
                             position={job.position}
+<<<<<<< HEAD
                             img={job.image ? job.image : logo}
+=======
+                            img={job.Manager.image ? job.Manager.image : logo}
+>>>>>>> 53bf25d99cae684e994b4b2bfff74bafe7ab7ee5
                             address={job.address}
                             pay={job.pay}
                             hours={job.hours}
