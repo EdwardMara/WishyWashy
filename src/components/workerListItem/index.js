@@ -12,7 +12,7 @@ export function WorkerUList({ children }) {
 
 export function WorkerListItem(props) {
     return (
-        <article className="bt bb b--black-10 shadow-1 list-item">
+        <article className="bt bb b--black-10 shadow-1 list-item" onClick={props.handleClick}>
             <a className="db pv4 ph3 ph0-l no-underline black dim" href="#0">
                 <div className="flex flex-wrap-ns flex-column-ns">
                     <div className="w-100 w-60-ns pl3-ns">
