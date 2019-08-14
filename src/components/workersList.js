@@ -3,6 +3,8 @@ import { WorkerUList, WorkerListItem } from "./workerListItem";
 import { connect } from 'react-redux';
 import API from "../utils/API";
 import { Link } from 'react-router-dom';
+import { url } from "inspector";
+import image from "../img/wishywashylogo.png";
 
 class WorkerList extends Component {
   state = {
@@ -41,6 +43,15 @@ class WorkerList extends Component {
                   address={worker.address}
                   email={worker.email}
                   phone={worker.phone}
+                  image={image}
+                  onClick = {this.handleOnClick()}
+                />
+                <WorkerListItem
+                  name={"Jimmy Mara"}
+                  address={"2809 lakemont dr."}
+                  email={"e.james.mara@gmail.com"}
+                  phone={"2143162777"}
+                  image={image}
                   onClick = {this.handleOnClick()}
                 />
               </Link>
