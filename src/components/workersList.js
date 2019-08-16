@@ -3,7 +3,6 @@ import { WorkerUList, WorkerListItem } from "./workerListItem";
 import { connect } from 'react-redux';
 import API from "../utils/API";
 import { Link } from 'react-router-dom';
-// import { url } from "inspector";
 import image from "../img/wishywashylogo.png";
 
 class WorkerList extends Component {
