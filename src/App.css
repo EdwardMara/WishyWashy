@@ -206,7 +206,7 @@ body {
 }
 
 .starter-buttons {
-  width: 25%;
+  width: 50%;
   background-color: #2B3A42;
   border: 1px solid #FFD938;
   margin: 1em;
@@ -223,6 +223,23 @@ body {
 }
 .starter-buttons:hover {
   color: #d1a900;
+}
+
+.loginCard {
+  display: flex;
+  width: 100%;
+  background-image: linear-gradient(75deg, #2B3A42, #4e6d7e);
+  border-bottom: 1px solid #2B3A42;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+.loginCard .loginButton {
+  flex: 1;
+  margin: auto;
+}
+.loginCard .loginContent {
+  flex: 2;
+  margin: auto;
 }
 
 footer {
