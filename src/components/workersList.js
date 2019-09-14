@@ -49,14 +49,6 @@ class WorkerList extends Component {
                   handleClick = {this.handleOnClick()}
                   image={image}
                 />
-                {/* <WorkerListItem
-                  name={"Jimmy Mara"}
-                  address={"2809 lakemont dr."}
-                  email={"e.james.mara@gmail.com"}
-                  phone={"2143162777"}
-                  image={image}
-                  onClick = {this.handleOnClick()}
-                /> */}
               </Link>
             )
           })}
