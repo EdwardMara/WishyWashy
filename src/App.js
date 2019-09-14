@@ -1,8 +1,6 @@
 
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Navbar from './components/Navbar/index';
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import jwt_decode from "jwt-decode";
@@ -24,7 +22,6 @@ import RegisterWorker from "./components/RegisterWorker";
 import RegisterManager from "./components/RegisterManager";
 import LoginWorker from "./components/LoginWorker";
 import LoginManager from "./components/LoginManager";
-import HelloWorker from "./components/HelloWorker";
 import HelloManager from "./components/HelloManager";
 import LoginNavbar from "./components/LoginNavbar"
 import WorkerDash from "./components/WorkerDash"

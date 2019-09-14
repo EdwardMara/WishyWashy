@@ -3,7 +3,6 @@ import { List, ListItem } from "./List";
 
 import { connect } from 'react-redux';
 
-import jobs from "./jobs.json";
 import API from "../utils/API";
 import logo from '../img/wishywashylogo.png'
 
@@ -11,7 +10,6 @@ import logo from '../img/wishywashylogo.png'
 
 class WorkerDash extends Component {
     state = {
-        jobs,
         jobList: [],
         worker: {}
     };
