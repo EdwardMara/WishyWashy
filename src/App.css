@@ -228,18 +228,32 @@ body {
 .loginCard {
   display: flex;
   width: 100%;
-  background-image: linear-gradient(75deg, #2B3A42, #4e6d7e);
-  border-bottom: 1px solid #2B3A42;
-  margin-bottom: 2em;
-  margin-top: 2em;
+  background: #f0f0df;
 }
 .loginCard .loginButton {
   flex: 1;
-  margin: auto;
+  background-image: url(./img/dishes.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  padding: 6em 0;
 }
 .loginCard .loginContent {
-  flex: 2;
+  font-family: "Manjari", sans-serif;
+  flex: 1;
   margin: auto;
+}
+.loginCard .loginContent h1 {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.leftJustify {
+  justify-content: left;
+}
+
+.rightJustify {
+  justify-content: right;
 }
 
 footer {

@@ -75,21 +75,29 @@ class Landing extends Component {
               Worker Login
             </Link>
           </div>
-          <div class="loginContent">
+          <div class="loginContent rightJustify">
             <h1>Take a Job!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non libero congue, luctus quam sit amet, tristique augue. Sed id dui suscipit, faucibus leo quis, ornare tellus. Morbi eu congue lorem. Aenean posuere eget ante at accumsan. Pellentesque consectetur gravida libero et ultricies. Pellentesque non eros dictum metus lacinia lacinia et sit amet diam. In malesuada, orci vel auctor viverra, lectus massa feugiat mauris, in commodo lacus odio nec augue. Sed sit amet gravida nisi, id scelerisque magna. Integer eleifend turpis varius lectus volutpat sagittis. Morbi sed posuere nulla, at tempus ligula. Curabitur cursus ex eget odio varius faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque metus mi, tincidunt at feugiat sed, sollicitudin vitae massa.</p>
+            <ul>
+              <li>Find a one off job posted by a restaurant </li>
+              <li>Make supplemental income</li>
+              <li>a third thing!</li>
+            </ul>
           </div>
         </div>
         {/* Manager Login */}
         <div class="loginCard">
+          <div class="loginContent leftJustify">
+            <h1>Post a Job!</h1>
+            <ul>
+              <li>Find a one off job posted by a restaurant </li>
+              <li>Make supplemental income</li>
+              <li>a third thing!</li>
+            </ul>
+          </div>
           <div class="loginButton">
             <Link to="/loginManager" className="btn starter-buttons">
               Manager Login
             </Link>
-          </div>
-          <div class="loginContent">
-            <h1>Post a Job!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non libero congue, luctus quam sit amet, tristique augue. Sed id dui suscipit, faucibus leo quis, ornare tellus. Morbi eu congue lorem. Aenean posuere eget ante at accumsan. Pellentesque consectetur gravida libero et ultricies. Pellentesque non eros dictum metus lacinia lacinia et sit amet diam. In malesuada, orci vel auctor viverra, lectus massa feugiat mauris, in commodo lacus odio nec augue. Sed sit amet gravida nisi, id scelerisque magna. Integer eleifend turpis varius lectus volutpat sagittis. Morbi sed posuere nulla, at tempus ligula. Curabitur cursus ex eget odio varius faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque metus mi, tincidunt at feugiat sed, sollicitudin vitae massa.</p>
           </div>
         </div>
         {/* <div className="row">
