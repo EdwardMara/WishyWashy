@@ -20,7 +20,9 @@ const carouselText = {
   color: 'white',
   background: `rgba(${0}, ${0}, ${0}, ${.5})`,
   padding: '10px',
-  marginBottom: '40%'
+  marginBottom: '40%',
+  fontSize: '2em',
+  fontFamily: 'Manjari'
 };
 
 class Landing extends Component {
@@ -31,31 +33,26 @@ class Landing extends Component {
     return (
       <div>
         <div style={carStyle} id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img class="d-block w-100" src={dishpit} alt="First slide" />
-              <div style={carouselText} class="carousel-caption d-none d-md-block">
+              <div style={carouselText} class="carousel-caption col-sm-4">
                 <h1>No call. No Show. No Problem.</h1>
                 <p>Essential personnel, when you need it</p>
               </div>
             </div>
             <div class="carousel-item">
               <img class="d-block w-100" src={prep} alt="Second slide" />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Insure you're properly staffed for peak hours.</h5>
+              <div style={carouselText} class="carousel-caption col-sm-3 d-none d-md-block">
+                <h5>Ensure you're properly staffed for peak hours.</h5>
                 <p>Only pay for the hours you need.</p>
               </div>
             </div>
             <div class="carousel-item">
               <img class="d-block w-100" src={glasses} alt="Third slide" />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Recruit dishwashers, prepcooks, and other boh staff now!</h5>
-                <p>...</p>
+              <div style={carouselText}  class="carousel-caption col-sm-3 d-none d-md-block">
+                <h5>Recruit dishwashers, prepcooks, and other BOH staff now!</h5>
+                
               </div>
             </div>
           </div>
@@ -76,23 +73,23 @@ class Landing extends Component {
             </Link>
           </div>
           <div class="loginContent rightJustify">
-            <h1>Take a Job!</h1>
-            <ul>
-              <li>Find a one off job posted by a restaurant </li>
-              <li>Make supplemental income</li>
-              <li>a third thing!</li>
-            </ul>
+            <h1>Shift Applicants</h1>
+            <bl>
+              <li>Apply for a shift</li>
+              <li>Upload relevent documents</li>
+              <li>Make some dough</li>
+            </bl>
           </div>
         </div>
         {/* Manager Login */}
         <div class="loginCard">
           <div class="loginContent leftJustify">
-            <h1>Post a Job!</h1>
-            <ul>
-              <li>Find a one off job posted by a restaurant </li>
-              <li>Make supplemental income</li>
-              <li>a third thing!</li>
-            </ul>
+            <h1>Managers</h1>
+            <bl>
+              <li>Post a shift</li>
+              <li>Review/approve potential applicants</li>
+              <li>Keep your business running smoothly</li>
+            </bl>
           </div>
           <div class="loginButton">
             <Link to="/loginManager" className="btn starter-buttons">
