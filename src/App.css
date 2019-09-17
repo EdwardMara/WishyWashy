@@ -15,6 +15,10 @@ body {
   background-color: #f0f0df;
 }
 
+.theSite * {
+  font-family: "Manjari", sans-serif;
+}
+
 .form-login {
   font-family: "Ubuntu", "Lato", sans-serif;
   font-weight: 400;
@@ -206,7 +210,7 @@ body {
 }
 
 .starter-buttons {
-  width: 25%;
+  width: 50%;
   background-color: #2B3A42;
   border: 1px solid #FFD938;
   margin: 1em;
@@ -223,6 +227,45 @@ body {
 }
 .starter-buttons:hover {
   color: #d1a900;
+}
+
+.uploadImg {
+  width: 75%;
+}
+
+.loginCard {
+  display: flex;
+  width: 100%;
+  background: #f0f0df;
+}
+.loginCard .loginButton {
+  flex: 1;
+  background-image: url(./img/dishes.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  padding: 6em 0;
+}
+.loginCard .loginContent {
+  font-family: "Manjari", sans-serif;
+  flex: 1;
+  margin: auto;
+}
+.loginCard .loginContent h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#picture2 {
+  background-image: url(./img/busrack.jpeg);
+}
+
+.leftJustify {
+  justify-content: left;
+}
+
+.rightJustify {
+  justify-content: right;
 }
 
 footer {

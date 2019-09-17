@@ -40,5 +40,4 @@ As a worker after you log in you will be met with a job list with information ab
 ## Authors
 Daniel Rogalsky  
 Jimmy Mara  
-Georgia Chrisinger  
 Sveta Y.  

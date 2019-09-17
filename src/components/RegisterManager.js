@@ -135,7 +135,7 @@ class RegisterManager extends Component {
                   componentDisplayMode={{
                     type: 'button',
                     customText: 'Upload Image',
-                    customClass: 'some-custom-class'
+                    customClass: 'btn starter-buttons uploadImg'
                   }}
                   onSuccess={(res) => {
                     console.log(res);

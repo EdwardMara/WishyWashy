@@ -32,6 +32,12 @@ class WorkerList extends Component {
     .then(console.log('job updated'))
   }
 
+  handleDelete = () => {
+    API.deleteJob(this.state.job.id).then(
+      console.log('deleted')
+    ).catch()
+  }
+
   render() {
     return (
       <div>
@@ -48,18 +54,13 @@ class WorkerList extends Component {
                   handleClick = {this.handleOnClick()}
                   image={image}
                 />
-                {/* <WorkerListItem
-                  name={"Jimmy Mara"}
-                  address={"2809 lakemont dr."}
-                  email={"e.james.mara@gmail.com"}
-                  phone={"2143162777"}
-                  image={image}
-                  onClick = {this.handleOnClick()}
-                /> */}
               </Link>
             )
           })}
         </WorkerUList>
+        <Link to="/helloManager">
+          <button className="btn starter-buttons" handleClick={this.handleDelete()}>I want to delete this job.</button>
+        </Link>
       </div>
     )
   }
