@@ -22,7 +22,10 @@ const carouselText = {
   padding: '10px',
   marginBottom: '40%',
   fontSize: '2em',
-  fontFamily: 'Manjari'
+  fontFamily: 'Manjari',
+  textShadowColor: 'rgba(0, 0, 0, 0.75)',
+  textShadowOffset: {width: -1, height: 1},
+  textShadowRadius: 10
 };
 
 class Landing extends Component {
@@ -36,7 +39,7 @@ class Landing extends Component {
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img class="d-block w-100" src={dishpit} alt="First slide" />
-              <div style={carouselText} class="carousel-caption col-sm-4">
+              <div style={carouselText} class="carousel-caption col-sm-6">
                 <h1>No call. No Show. No Problem.</h1>
                 <p>Essential personnel, when you need it</p>
               </div>
