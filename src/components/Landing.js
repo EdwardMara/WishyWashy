@@ -74,22 +74,24 @@ class Landing extends Component {
           </div>
           <div class="loginContent rightJustify">
             <h1>Shift Applicants</h1>
-            <bl>
+            <br />
+            <ul>
               <li>Apply for a shift</li>
               <li>Upload relevent documents</li>
               <li>Make some dough</li>
-            </bl>
+            </ul>
           </div>
         </div>
         {/* Manager Login */}
         <div class="loginCard">
           <div class="loginContent leftJustify">
             <h1>Managers</h1>
-            <bl>
+            <br />
+            <ul>
               <li>Post a shift</li>
               <li>Review/approve potential applicants</li>
               <li>Keep your business running smoothly</li>
-            </bl>
+            </ul>
           </div>
           <div class="loginButton" id="picture2">
             <Link to="/loginManager" className="btn starter-buttons">

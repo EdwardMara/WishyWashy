@@ -52,15 +52,9 @@ class HelloManager extends Component {
 
     return (
       <div>
-        <h2>Manager Dashboard</h2>
         <Link to="/Manager/newJob">
-          <button>Make a new Job!</button>
+          <button class="btn starter-buttons">Make a new Job!</button>
         </Link>
-        <form onSubmit={this.handleFormSubmit}>
-          <label>Delete a job: </label>
-          <input onChange={this.onChanges} type="number" name="job" min="1" max="99" />
-          <input type="submit"/>
-        </form>
         {auth.isAuthenticated ?
           <List>
             {this.state.manager.Jobs.map(job => {
@@ -79,7 +73,13 @@ class HelloManager extends Component {
               )
             })}
           </List> :
-          <p>there was a problem loading your jobs</p>
+          <div>
+            <p>Uh Oh! There was a problem loading your jobs. You may need to log in again.</p>
+
+            <Link to={"/loginManager"} className="btn starter-buttons">
+              Manager Login
+          </Link>
+          </div>
         }
       </div>
     );

@@ -22,7 +22,9 @@ body {
     background-color: $content-color;
 }
 
-
+.theSite * {
+    font-family: 'Manjari', sans-serif;
+}
 
 .form-login {
     font-family: 'Ubuntu', 'Lato', sans-serif;
@@ -267,6 +269,10 @@ body {
     }
 }
 
+.uploadImg {
+    width: 75%
+}
+
 .loginCard {
     display: flex;
     width: 100%;
@@ -284,7 +290,7 @@ body {
         flex: 1;
         margin: auto;
         h1 {
-            font-size: 1.25em;
+            font-size: 1.5em;
             font-weight: bold;
 
         }
