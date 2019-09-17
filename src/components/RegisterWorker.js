@@ -124,7 +124,7 @@ class RegisterWorker extends Component {
                   componentDisplayMode={{
                     type: 'button',
                     customText: 'Upload Docs',
-                    customClass: 'some-custom-class'
+                    customClass: 'btn starter-buttons uploadImg'
                   }}
                   onSuccess={(res) => {
                     console.log(res);
