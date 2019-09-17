@@ -31,11 +31,6 @@ class Landing extends Component {
     return (
       <div>
         <div style={carStyle} id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img class="d-block w-100" src={dishpit} alt="First slide" />
@@ -94,7 +89,7 @@ class Landing extends Component {
               <li>a third thing!</li>
             </ul>
           </div>
-          <div class="loginButton">
+          <div class="loginButton" id="picture2">
             <Link to="/loginManager" className="btn starter-buttons">
               Manager Login
             </Link>

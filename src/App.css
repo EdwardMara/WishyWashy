@@ -248,6 +248,10 @@ body {
   font-weight: bold;
 }
 
+#picture2 {
+  background-image: url(./img/busrack.jpeg);
+}
+
 .leftJustify {
   justify-content: left;
 }
